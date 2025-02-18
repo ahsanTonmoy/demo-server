@@ -9,6 +9,10 @@ app.get('/', (req: Request, res: Response) => {
   res.send('demo server is on port 3000 v.003 !')
 })
 
+app.get('/hide', (req: Request, res: Response) => {
+  res.send('demo server dark !')
+})
+
 export default app
 
 //  D:\Server-file\assignment 02\demo-server\dist/ .env
