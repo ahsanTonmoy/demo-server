@@ -1,6 +1,6 @@
 import app from './app'
-import config from './app/config'
 import mongoose from 'mongoose'
+import config from './app/config'
 //
 
 async function main() {
@@ -11,7 +11,7 @@ async function main() {
 
     // local
     app.listen(config.port, () => {
-      console.log(` app listening on  ${config.port}`)
+      console.log(`bike store app listening on  ${config.port}`)
     })
   } catch (error) {
     console.log(error)

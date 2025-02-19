@@ -1,18 +1,19 @@
 import express, { Request, Response } from 'express'
 import cors from 'cors'
+import { productRoutes } from './app/modules/product/product.routes'
 const app = express()
 
+app.use(express.json())
+app.use(cors())
 //
-app.use(express.json()), app.use(cors())
-
+app.use('/product', productRoutes)
+app.use('/product', productRoutes)
+//
 app.get('/', (req: Request, res: Response) => {
-  res.send('demo server is on port 3000 v.003 !')
+  res.send('bike server is on v.1.00')
 })
-
-app.get('/hide', (req: Request, res: Response) => {
-  res.send('demo server dark !')
+app.get('/test', (req: Request, res: Response) => {
+  res.send('bike server is on test')
 })
 
 export default app
-
-//  D:\Server-file\assignment 02\demo-server\dist/ .env
